@@ -87,14 +87,14 @@ void initHasp() {
             generateHaspDongleData("267610069420"); // drive
         }
 
-        enableHook(hasp_login, 0x8921FD0);
-        enableHook(hasp_get_size, 0x8922F60);
-        enableHook(hasp_encrypt, 0x892215C);
+        enableHook(hasp_login, 0x8664E40);
+        enableHook(hasp_get_size, 0x8665DD0);
+        enableHook(hasp_encrypt, 0x8664FCC);
 
-        enableHook(hasp_logout, 0x89281f4);
-        enableHook(hasp_decrypt, 0x8922248);
-        enableHook(hasp_read, 0x8922DC8);
-        enableHook(hasp_write, 0x8922E94);
+        enableHook(hasp_logout, 0x866B064);
+        enableHook(hasp_decrypt, 0x86650B8);
+        enableHook(hasp_read, 0x8665C38);
+        enableHook(hasp_write, 0x8665D04);
 
     } else {
 

@@ -274,7 +274,7 @@ bool loadKeybinds() {
 
 void init_input() {
     if (isMt4) {
-        enableHook(initWindow, 0x89B8680);
+        enableHook(initWindow, 0x86F8680);
     } else {
         enableHook(initWindow, 0xa824460);
     }

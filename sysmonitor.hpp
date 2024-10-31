@@ -100,7 +100,7 @@ defineHook(int, updateSysMonitorMt5dxp, int a1, int a2) {
 
 void initSysMonitor() {
     if (isMt4) {
-        enableHook(updateSysMonitorMt4, 0x80A9B70);
+        enableHook(updateSysMonitorMt4, 0x8093CA0);
     } else {
         enableHook(updateSysMonitorMt5dxp, 0x8288040);
     }
