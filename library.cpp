@@ -596,30 +596,30 @@ void initialize_wlldr() {
     }
 
     if (isMt4) {
-        patchMemoryString0((void*)0x88A8404, "mucha.local");
+        patchMemoryString0((void*)0x8C10F04, "mucha.local");
 
-        enableHook(logmt4, 0x808B6B0);
+        enableHook(logmt4, 0x809DDB0);
 
        if (isTerminal)
            enableHook(isTerminalMt4, 0x841BF00);
 
         // content router fix
-        enableHook(refreshNetwork, 0x81BF4F0);
+        enableHook(refreshNetwork, 0x821D4F0);
 
-        patchMemory((void*)0x80912BD, { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 });
+        patchMemory((void*)0x80A0920, { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 });
 
-        enableHook(sendAlthmand, 0x8726080);
+        enableHook(sendAlthmand, 0x89E5B80);
 
         // fix resolution
         enableHook(XGetWindowAttributes, XGetWindowAttributes);
 
-        enableHook(XOpenDisplay, 0x8055EA4);
+        enableHook(XOpenDisplay, 0x8057D28);
 
-        enableHook(FFBIo_State_PowerOn, 0x82E0E70);
-        enableHook(FFBIo_State_PowerOff, 0x82E0D50);
+        enableHook(FFBIo_State_PowerOn, 0x8369CD0);
+        enableHook(FFBIo_State_PowerOff, 0x8369BB0);
 
-        enableHook(open, 0x8055E84);
-        enableHook(glTexParameteri, 0x80571B4);
+        enableHook(open, 0x8057D08);
+        enableHook(glTexParameteri, 0x8059228);
     } else {
         patchMemoryString0((void*)0xaafaa88, "mucha.local");
         //patchMemory((void*)0x81de9fc, { 0x66, 0xc7, 0x85, 0x62, 0xfe, 0xff, 0xff, 0xBB, 0x01 }); // port 443 mucha patch

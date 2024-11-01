@@ -53,7 +53,7 @@ defineHook(void, initGlx, int* a1) {
 
 void init_limiter() {
     if (isMt4) {
-        enableHook(initGlx, 0x86FA5B0);
+        enableHook(initGlx, 0x89BA430);
     } else {
         enableHook(initGlx, 0xa826310);
     }
